@@ -1,19 +1,8 @@
-# Defaults.
+# Defaults
 PROJECT='www.worldcommunitygrid.org'
 WEAK_KEY='949787_15ca7825fb58f9d01b6ad15221c3f048'
 
-# Argument parsing.
-while getopts ':p:w' flag
-    
-do
-    case $flag in
-        p) PROJECT=$OPTARG;;
-        w) WEAK_KEY=$OPTARG;;
-        \?) help; exit 2;;
-    esac
-done
-
-# Start BOINC.
+# Start BOINC
 /usr/bin/boinc \
   --attach_project \
     $PROJECT \

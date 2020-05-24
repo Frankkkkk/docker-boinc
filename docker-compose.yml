@@ -1,0 +1,11 @@
+version: "3"
+services:
+    boinc:
+        build: .
+        environment:
+            - BOINC_MAX_NCPUS_PCT=100
+            - BOINC_CPU_USAGE_LIMIT=10
+        volumes:
+            - data:/data
+volumes:
+    data:
